@@ -54,7 +54,7 @@ code {
 @media screen and (max-width: 900px) {
   .App {
     flex-direction: column;
-    /* width: 100%; */
+    width: 50%;
   }
 }
 
