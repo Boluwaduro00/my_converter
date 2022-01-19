@@ -1,8 +1,5 @@
-// import { useState } from "react";
-import Form from "./components/Form";
-import Logo from "./image/pic2.jpg";
-// import SubmitButton from "./components/SubmitButton";
 
+import Form from "./components/Form";
 
 
 function App() {
@@ -13,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <img src={Logo} className="img" /> */}
+
       
       <div className="header">
         <h1>The Converter</h1>
