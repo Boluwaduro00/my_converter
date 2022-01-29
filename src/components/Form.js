@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function App() {
   const [weightInLb, setWeightInLb] = useState(0);
-  const [weightInKg, setWeightInKg] = useState();
+  const [weightInKg, setWeightInKg] = useState(0);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -51,7 +51,7 @@ function App() {
         <button 
         type="submit" 
         className="convert-btn">
-          Convert 
+          Convert
         </button>
         
           <p className="result">
@@ -63,5 +63,5 @@ function App() {
   
   export default App;
 
-  // weightInLb * 0.45359237
-  
+
+
