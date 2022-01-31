@@ -1,28 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
   const [weightInLb, setWeightInLb] = useState(0);
   const [weightInKg, setWeightInKg] = useState(0);
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  const handleSubmit = () => {
     const formValid = weightInLb >= 0;
     if (!formValid ){
       return;
     }
-    setWeightInKg(weightInLb * 0.4536);
+    setWeightInKg(weightInLb * 0.453592);
   }
 
   function handleChange(e) {
-    setWeightInLb(e.target.value) 
+    setWeightInLb(e.target.value);
   }
 
   function handleChange2(e) {
     setWeightInKg(e.target.value)
   }
 
+
+  useEffect(()=>{
+    handleSubmit();   
+  },[weightInLb]);
+
     return (
-     <form onSubmit={handleSubmit}>
+     <form>
          <div className="pound-selector">
           <input 
           type="number" 
@@ -30,6 +34,7 @@ function App() {
           value={weightInLb}
           onChange={handleChange}
           />
+          {/* <label className="pound-select">Pound</label> */}
           <select name="pound" className="pound-select" >
             <option value="pound">Pound</option>
             <option value="kilogram">Kilogram</option>
@@ -41,18 +46,16 @@ function App() {
             type="number" 
             className="pound-input" 
             onChange={handleChange2}
-            value={weightInKg}
+            value = {weightInKg}
             />
-          <select name="pound" className="pound-select" >
+
+            {/* <label className="pound-select">Kilogram</label> */}
+          <select name="kilo" className="kilo-select" >
             <option value="pound">Kilogram</option>
             <option value="kilogram">Pound</option>
-          </select>
+          </select> 
+    
         </div>
-        <button 
-        type="submit" 
-        className="convert-btn">
-          Convert
-        </button>
         
           <p className="result">
             <span>{weightInLb} Pound(lbs) = {weightInKg}Kilograms(kg)</span>

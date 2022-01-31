@@ -87,18 +87,29 @@ code {
 .pound-selector input {
   border-radius: 50px;
 }
-.pound-selector label {
+/* .pound-selector label {
   margin: 5px;
-}
+} */
 
 .pound-select {
-  width: 100px;
+  width: 90px;
   border-radius: 20px;
   border: none;
   height: 25px;
   font-size: 15px;
   text-align: center;
-  margin: 20px 10px;
+  margin: 20px ;
+  background-color: #7a89af;
+}
+
+.kilo-select {
+  width: 90px;
+  border-radius: 20px;
+  border: none;
+  height: 25px;
+  font-size: 15px;
+  text-align: center;
+  margin: 20px ;
   background-color: #7a89af;
 }
 
